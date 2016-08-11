@@ -44,7 +44,7 @@ public class DisplayContact extends ActionBarActivity {
             if(Value>0){
                 //means this is the view part not the add contact part.
                 Cursor rs = mydb.getData(Value);
-                id_To_Update = Value
+                id_To_Update = Value;
                 rs.moveToFirst();
 
                 String nam = rs.getString(rs.getColumnIndex(DBHelper.CONTACTS_COLUMN_NAME));
