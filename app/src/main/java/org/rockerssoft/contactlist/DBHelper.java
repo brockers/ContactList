@@ -4,12 +4,9 @@ package org.rockerssoft.contactlist;
  * Created by bobby on 1/12/16.
  */
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Hashtable;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
-import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteDatabase;
 
@@ -29,8 +26,8 @@ public class DBHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         // TODO Auto-generated method stub
-        db.execSQL( "CREATE TABLE CONTACTS " +
-                "(ID integer primary key AUTOINCREMENT, " +
+        db.execSQL( "CREATE TABLE CONTACTS (" +
+                "ID integer primary key AUTOINCREMENT," +
                 "NAME text," +
                 "PHONE text," +
                 "ENTERED DATETIME DEFAULT CURRENT_TIMESTAMP)" );
